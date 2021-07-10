@@ -107,7 +107,14 @@ $(document).ready(function(){
     opcao[2] = $("#txtOpcao3").text();
     opcao[3] = $("#txtOpcao4").text();
     opcao[4] = $("#txtOpcao5").text();
+
     opcao = opcao.filter(Boolean);
+    for (let i = opcao.length -1; i > 0; i--) {
+      let j = Math.floor(Math.random() * i);
+      let k = opcao[i];
+      opcao[i] = opcao[j];
+      opcao[j] = k;
+    }
     
     if(numero == 0)
       alert("Você não deu nenhuma opção!"); 
