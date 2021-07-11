@@ -17,7 +17,7 @@
   <nav class="navbar navbar-expand-sm bg-dark fixed-top">
     <ul class="nav navbar-nav ms-auto">
       <li>
-        <button class="btn btn-primary" id="btnEscolher"> Escolher </button>
+        <button type="button" class="btn btn-primary" id="btnEscolher" data-bs-toggle="modal"> Escolher </button>
       </li>
     </ul>
   </nav>
@@ -26,7 +26,7 @@
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#inserirOpcao" id="add"> Adicionar Opção </button>
 
     <div class="modal fade" id="inserirOpcao" tabindex="-1" aria-labelledby="inserirOpcao" aria-hidden="true">
-      <div class="modal-dialog">
+      <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="inserirOpcao"> Escreva a Opção: </h5>
@@ -35,7 +35,7 @@
             <textarea class="form-control" id="textareaOpcao"></textarea>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="botao"> Fechar </button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="botao"> Salvar </button>
           </div>
         </div>
       </div>
@@ -73,6 +73,20 @@
       <p id="txtOpcao5"></p>
       <div class="text-end">
         <button type="button" class="btn-close" id="fechar5"></button>
+      </div>
+    </div>
+
+    <div class="modal fade" id="escolhido" tabindex="-1" aria-labelledby="escolhido" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title"> A opção escolhida é: </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body">
+            <p id="oEscolhido"></p>
+          </div>
+        </div>
       </div>
     </div>
   </div>

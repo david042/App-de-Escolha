@@ -116,11 +116,20 @@ $(document).ready(function(){
       opcao[j] = k;
     }
     
-    if(numero == 0)
-      alert("Você não deu nenhuma opção!"); 
-    if(numero == 1)
+    if(numero == 0){      
+      $("#btnEscolher").attr("data-bs-target", "");
+
+      alert("Você não deu nenhuma opção!");
+    }
+    if(numero == 1){
+      $("#btnEscolher").attr("data-bs-target", "");
+
       alert("Dê mais uma opção!");
-    if(numero >= 2)
-      alert(opcao[aleatorio]);
+    }
+    if(numero >= 2){
+      $("#btnEscolher").attr("data-bs-target", "#escolhido");
+
+      $("#oEscolhido").text(opcao[aleatorio]);
+    }
   });
 });
