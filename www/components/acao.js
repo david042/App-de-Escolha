@@ -116,19 +116,16 @@ $(document).ready(function(){
       opcao[j] = k;
     }
     
-    if(numero == 0){      
-      $("#btnEscolher").attr("data-bs-target", "");
-
-      alert("Você não deu nenhuma opção!");
+    if(numero == 0){
+      $("#titulo").text("Epa");
+      $("#oEscolhido").text("Você não deu nenhuma opção!");
     }
     if(numero == 1){
-      $("#btnEscolher").attr("data-bs-target", "");
-
-      alert("Dê mais uma opção!");
+      $("#titulo").text("Epa");
+      $("#oEscolhido").text("Dê mais uma opção!");
     }
     if(numero >= 2){
-      $("#btnEscolher").attr("data-bs-target", "#escolhido");
-
+      $("#titulo").text("A opção escolhida é:");
       $("#oEscolhido").text(opcao[aleatorio]);
     }
   });
